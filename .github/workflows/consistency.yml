@@ -1,0 +1,29 @@
+name: consistency check
+on:
+  pull_request:
+    paths: ["docs/**", "AGENTS.md", "guides/**"]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r requirements-dev.txt
+      - name: Rebuild index
+        run: python scripts/build_index.py
+      - name: Changed files
+        id: diff
+        run: echo "files=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- docs AGENTS.md guides | tr '\n' ' ')" >> $GITHUB_OUTPUT
+      - name: Check
+        env: { ANTHROPIC_API_KEY: "${{ secrets.ANTHROPIC_API_KEY }}" }
+        run: python scripts/consistency_check.py ${{ steps.diff.outputs.files }} | tee check.txt
+      - name: Comment on PR
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = '### Consistency check\n```\n' + fs.readFileSync('check.txt','utf8').slice(0, 60000) + '\n```';
+            await github.rest.issues.createComment({ ...context.repo, issue_number: context.issue.number, body });

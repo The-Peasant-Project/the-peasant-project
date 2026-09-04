@@ -1,0 +1,15 @@
+{
+  "name": "peasant-project",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+  "postCreateCommand": "pip install -r requirements-docs.txt -r requirements-dev.txt",
+  "forwardPorts": [8000],
+  "customizations": {
+    "vscode": {
+      "extensions": ["bierner.markdown-mermaid", "ms-python.python"]
+    }
+  }
+}

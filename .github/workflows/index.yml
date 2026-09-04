@@ -1,0 +1,16 @@
+name: rebuild index
+on:
+  push:
+    branches: [main]
+    paths: ["docs/**"]
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pyyaml && python scripts/build_index.py
+      - run: |
+          git config user.name "index-bot" && git config user.email "bot@peasant.project"
+          git add INDEX.md && git diff --cached --quiet || git commit -m "rebuild index" && git push

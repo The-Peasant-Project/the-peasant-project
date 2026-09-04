@@ -1,0 +1,46 @@
+site_name: The Peasant Project
+site_description: Community-owned compute that turns wasted energy into shared prosperity.
+docs_dir: docs
+theme:
+  name: material
+  features: [navigation.sections, navigation.expand, content.code.copy]
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - tables
+  - toc
+nav:
+  - Start here: 00-one-pager.md
+  - Vision and principles: 01-vision-and-principles.md
+  - Why now: 02-why-now.md
+  - How it works:
+      - Overview: 03-how-it-works/README.md
+      - Who owns what: 03-how-it-works/01-ownership.md
+      - Where the money goes: 03-how-it-works/02-money.md
+      - Where the energy comes from: 03-how-it-works/03-energy.md
+      - Who decides: 03-how-it-works/04-decisions.md
+  - Deep dives:
+      - Index: 04-deep-dives/README.md
+      - Biology: 04-deep-dives/biology.md
+      - Indigenous governance: 04-deep-dives/indigenous-governance.md
+      - Economics: 04-deep-dives/economics.md
+      - Psychology and anthropology: 04-deep-dives/psychology-anthropology.md
+      - Environment: 04-deep-dives/environment.md
+      - Philosophy: 04-deep-dives/philosophy.md
+      - Computer science: 04-deep-dives/computer-science.md
+  - The critics: 05-critics.md
+  - Hand-waving register: 06-hand-waving-register.md
+  - The pathway: 07-pathway.md
+  - Playbook: 08-playbook.md
+  - Roadmap: 09-roadmap.md
+  - Architecture: 10-architecture.md
+  - Build specs:
+      - Index: 11-build-specs/README.md
+      - Scheduler: 11-build-specs/scheduler.md
+  - Appendices:
+      - Glossary: 12-appendices/glossary.md
+      - References: 12-appendices/references.md
+      - Decision log: 12-appendices/decision-log.md
