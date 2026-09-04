@@ -5,7 +5,7 @@ Humans: scan the summaries. Agents: load `AGENTS.md`, then only the documents wh
 
 | Part | Id | Title | Status | Audience | Tags | Summary |
 |---|---|---|---|---|---|---|
-| 0 | `00-one-pager` | [Understory in one page](docs/00-one-pager.md) | draft | everyone | primer, overview | The whole idea in a page, written for a hairdresser, an elder, a student, a plumber, a councillor and an economist at once. |
+| 0 | `00-one-pager` | [Understory in one page](docs/index.md) | draft | everyone | primer, overview | The whole idea in a page, written for a hairdresser, an elder, a student, a plumber, a councillor and an economist at once. |
 | 1 | `01-vision` | [Vision and principles](docs/01-vision-and-principles.md) | draft | everyone | vision, principles | What Understory moves away from, what it moves toward, and the ten principles every design choice is tested against. |
 | 2 | `02-why-now` | [Why now — a primer for the lay reader](docs/02-why-now.md) | draft | lay | primer, techno-feudalism, background | A short plain explanation of how we got here, why it feels like feudalism, and where to read or watch further if you want to go deeper. |
 | 3 | `03-ownership` | [Who owns what](docs/03-how-it-works/01-ownership.md) | draft | everyone, practitioner | ownership, membership, hosting | The three roles — member, host, and network entity — and why keeping them separate is the whole anti-feudal trick. |
@@ -93,7 +93,7 @@ Humans: scan the summaries. Agents: load `AGENTS.md`, then only the documents wh
    "Does the one-pager need a version for each audience, or is one truly enough? Test with real readers."
   ],
   "depends_on": [],
-  "path": "docs/00-one-pager.md"
+  "path": "docs/index.md"
  },
  {
   "id": "01-vision",

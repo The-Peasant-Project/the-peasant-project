@@ -70,4 +70,4 @@ It feels smooth and satisfying: fluency creates a false sense of understanding. 
 
 ## Known violations in this repo
 
-- `docs/00-one-pager.md` opens with an abstraction ("Most of what we do online..."), not a case, and never asks the reader to commit. Rewrite it against Part 2. Candidate opening case: the town pool's gas bill.
+- `docs/index.md` (the one-pager) opens with an abstraction ("Most of what we do online..."), not a case, and never asks the reader to commit. Rewrite it against Part 2. Candidate opening case: the town pool's gas bill.

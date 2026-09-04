@@ -6,7 +6,7 @@ The first piece is Understory: a protocol and playbook for small, community-owne
 
 It starts with one person and one machine. It does not need permission.
 
-Read first: [`docs/00-one-pager.md`](docs/00-one-pager.md)
+Read first: [`docs/index.md`](docs/index.md)
 Map of everything: [`INDEX.md`](INDEX.md)
 Working here with an AI agent: [`AGENTS.md`](AGENTS.md)
 Contributing as a human: [`CONTRIBUTING.md`](CONTRIBUTING.md)

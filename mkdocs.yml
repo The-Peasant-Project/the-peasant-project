@@ -1,5 +1,6 @@
 site_name: The Peasant Project
 site_description: Community-owned compute that turns wasted energy into shared prosperity.
+site_url: https://the-peasant-project.github.io/the-peasant-project/
 docs_dir: docs
 theme:
   name: material
@@ -13,7 +14,7 @@ markdown_extensions:
   - tables
   - toc
 nav:
-  - Start here: 00-one-pager.md
+  - Start here: index.md
   - Vision and principles: 01-vision-and-principles.md
   - Why now: 02-why-now.md
   - How it works:
